@@ -1,0 +1,24 @@
+---
+title: "DDP_W3assignment"
+author: "Mats"
+date: "30 september 2019"
+output:
+  html_document:
+    df_print: paged
+always_allow_html: yes
+---
+
+## Apple Inc. stock price
+Apple Inc. stock price from January 2007 ploted. Yahoo is data source.
+
+```{r, echo=FALSE, message=FALSE}
+library(plotly)
+library(quantmod)
+apa <- getSymbols("AAPL",src='yahoo')
+apple <- data.frame(Date=index(AAPL),coredata(AAPL))
+apple <- apple %>% select(1, 5)
+names(apple)[2] <- "Stock_price_close_USD"
+apple$name <- "Apple"
+plot_ly(apple, x = ~Date, y = ~Stock_price_close_USD, type = "scatter", mode = "lines")
+```
+
