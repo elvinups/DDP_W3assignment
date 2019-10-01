@@ -9,7 +9,7 @@ always_allow_html: yes
 ---
 
 ## Apple Inc. stock price
-Apple Inc. stock price from January 2007 ploted. Yahoo is data source.
+Apple Inc. stock price from January 2007 ploted. Zoom in to see stock price movements during a shorter timespan. Yahoo is data source.
 
 ```{r, echo=FALSE, message=FALSE}
 library(plotly)
