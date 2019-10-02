@@ -1,5 +1,5 @@
 ---
-title: "DDP_W3assignment"
+title: "Apple Inc. stock price"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -7,14 +7,12 @@ knit: (function(input_file, encoding) {
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Mats"
 date: "30 september 2019"
-output:
-  html_document:
-    df_print: paged
+output: ioslides_presentation
 always_allow_html: yes
 ---
 
 ## Apple Inc. stock price
-Apple Inc. stock price from January 2007 ploted. Zoom in to see stock price movements during a shorter timespan. Yahoo is data source.
+Apple Inc. stock price from January 2007 ploted in a graph. Zoom in to see stock price movements during a shorter timespan. Data source: Yahoo Finance.
 
 ```{r, echo=FALSE, message=FALSE}
 library(plotly)
